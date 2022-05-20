@@ -1,13 +1,21 @@
 [![Continuous Integration](https://github.com/joalbertg/dockerizing-ror-app/actions/workflows/build_with_tests_and_linters.yml/badge.svg)](https://github.com/joalbertg/dockerizing-ror-app/actions/workflows/build_with_tests_and_linters.yml)
 
-# Ruby on Rails on Docker with CI/CD
+# Portfolio
+
+## Entity-relationship model
+
+<p align="center">
+  <kbd>
+    <img src="miscellaneous/images/portfolio.png" title="workflow">
+  </kbd>
+</p>
 
 ## Quick start
 
 ### Configuration
 
 * Ruby version: `3.1.1`
-* Rails version: `7.0.2.3`
+* Rails version: `7.0.3`
 
 ### Build project
 
@@ -43,7 +51,6 @@ docker compose up
 
 * postgresql: `14.2-alpine`
 * redis: `7.0-rc-alpine`
-* sidekiq: `6.4.1`
 
 ## Deploy on Heroku (only on master branch)
 
