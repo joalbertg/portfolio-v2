@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'health_check', to: proc { [200, {}, ['success']] }
 
   namespace :v1 do
-    resources :portfolios, only: :create
+    resources :portfolios, only: :create do
+      post :stocks, to: 'stocks#create'
+    end
   end
 end
