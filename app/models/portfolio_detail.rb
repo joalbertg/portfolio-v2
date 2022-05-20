@@ -5,4 +5,6 @@ class PortfolioDetail < ApplicationRecord
 
   belongs_to :portfolio
   belongs_to :stock
+
+  has_many :stock_records
 end
