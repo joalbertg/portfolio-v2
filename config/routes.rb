@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'health_check', to: proc { [200, {}, ['success']] }
 
   namespace :v1 do
-    resources :portfolios, only: :create do
+    resources :portfolios, only: %i[show create] do
       get :profit, on: :member
       post :stocks, to: 'stocks#create'
       get 'stocks/:symbol/profit', to: 'stock#profit'

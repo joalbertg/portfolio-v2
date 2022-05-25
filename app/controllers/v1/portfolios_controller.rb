@@ -2,6 +2,16 @@
 
 module V1
   class PortfoliosController < ApplicationController
+    def show
+      response = Portfolios::FindUseCase.call(params)
+
+      if response.success?
+        render(json: response.payload.to_json)
+      else
+        render(json: { status: :unprocessable_entity })
+      end
+    end
+
     def create
       response = Portfolios::CreateUseCase.call(portfolio_params)
 
