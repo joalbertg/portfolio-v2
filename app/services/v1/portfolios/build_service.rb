@@ -20,6 +20,8 @@ module V1
       attr_reader :params
 
       def build_portfolio
+        raise if params[:name].blank?
+
         Portfolio.new(name: params[:name])
       end
     end
