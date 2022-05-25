@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :portfolio do
-    name { 'MyString' }
+    name { 'criptos' }
   end
 end
